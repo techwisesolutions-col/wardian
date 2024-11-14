@@ -163,6 +163,7 @@ if ($id_third) {
                                           <th class="text-center" scope="col">Valor Unitario</th>
                                           <th class="text-center" scope="col">% Descuento</th>
                                           <th class="text-center" scope="col">Impuesto de Retencion</th>
+                                            <th class="text-center" scope="col">Impuesto de Cargo</th>
                                           <th class="text-center" scope="col">Valor Total</th>
                                           <th class="text-center" scope="col">Acciones</th>
                                         </tr>
@@ -188,6 +189,7 @@ if ($id_third) {
                                           <td class="text-center"><input type="number" class="form-control quantity" name="quantity" value="1" required></td>
                                           <td class="text-center"><input type="number" class="form-control unit-value" name="unit_value" required readonly></td>
                                           <td class="text-center"><input type="number" class="form-control discount" name="discount" required></td>
+                                          <td class="text-center"><input type="number" class="form-control charge_tax" name="charge_tax" required></td>
                                           <td class="text-center"><input type="number" class="form-control withholding-tax" name="withholding_tax" required></td>
                                           <td class="text-center"><input type="number" class="form-control total-value" name="value_total" readonly></td>
                                           <td class="text-center">
@@ -290,19 +292,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const unitValue = parseFloat(row.querySelector('.unit-value').value) || 0;
     const discount = parseFloat(row.querySelector('.discount').value) || 0;
     const withholdingTax = parseFloat(row.querySelector('.withholding-tax').value) || 0;
+    const chargeTax = parseFloat(row.querySelector('.charge_tax').value) || 0;  // Obtén el valor de charge_tax
 
     let total = quantity * unitValue;
-    total -= total * (discount / 100);
-    total -= total * (withholdingTax / 100);
+    total -= total * (discount / 100);  // Aplica el descuento
+    total -= total * (withholdingTax / 100);  // Aplica el impuesto de retención
+    total += chargeTax;  // Suma el charge_tax al total
 
-    row.querySelector('.total-value').value = total.toFixed(2);
+    row.querySelector('.total-value').value = total.toFixed(2);  // Muestra el total final
   }
 
   // Event listener to add a new row
   document.querySelector('.add-row').addEventListener('click', () => {
     const newRow = table.rows[0].cloneNode(true);
-    newRow.querySelectorAll('input').forEach(input => input.value = '');
-    table.appendChild(newRow);
+    newRow.querySelectorAll('input').forEach(input => input.value = '');  // Limpia los campos de la nueva fila
+    table.appendChild(newRow);  // Añade la nueva fila al final de la tabla
   });
 
   // Event delegation for dynamically added rows
@@ -313,22 +317,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const selectedOption = target.options[target.selectedIndex];
       const price = selectedOption.getAttribute('data-price');
       unitValueInput.value = price || 0;
-      calculateTotal(target.closest('tr'));
+      calculateTotal(target.closest('tr'));  // Calcula el total después de seleccionar el producto
     }
   });
 
+  // Event listener to update total when inputs change
   table.addEventListener('input', (event) => {
     if (event.target.classList.contains('quantity') ||
         event.target.classList.contains('unit-value') ||
         event.target.classList.contains('discount') ||
-        event.target.classList.contains('withholding-tax')) {
-      calculateTotal(event.target.closest('tr'));
+        event.target.classList.contains('withholding-tax') ||
+        event.target.classList.contains('charge_tax')) {  // Incluye charge_tax en la condición
+      calculateTotal(event.target.closest('tr'));  // Recalcula el total cuando cambia cualquier campo relevante
     }
   });
 
+  // Event listener to remove rows
   table.addEventListener('click', (event) => {
     if (event.target.classList.contains('remove-row') && table.rows.length > 1) {
-      event.target.closest('tr').remove();
+      event.target.closest('tr').remove();  // Elimina la fila cuando se hace clic en el botón de eliminar
     }
   });
 });
