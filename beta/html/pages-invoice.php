@@ -40,7 +40,7 @@ if ($id_third) {
 
         // Ahora puedes usar las variables como desees
     } else {
-        echo "No se encontró un destinatario de factura con el ID proporcionado intenta de nuevo.";
+        echo "No se encontró un destinatario de factura con el ID proporcionado.";
     }
 } else {
     echo "El parámetro id_third es requerido.";
