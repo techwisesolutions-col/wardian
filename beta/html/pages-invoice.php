@@ -200,8 +200,7 @@ if ($id_third) {
                               </div>
                               <div class="col-sm-6"></div>
                               <div class="col-sm-6 text-right">
-                                 <button type="button" class="btn btn-link mr-3"><i class="ri-printer-line"></i> Download Print</button>
-                                 <button type="button" class="btn btn-primary">Crear Factura y Enviarf</button>
+                                 <button type="button" class="btn btn-primary"><i class="ri-printer-line"></i> Crear Factura y Enviar</button>
                               </div>
                               <div class="col-sm-12 mt-5">
                                  <b class="text-danger">Nota:</b>
