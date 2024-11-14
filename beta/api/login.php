@@ -19,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
         $_SESSION['name'] = $user['name'];
+        $_SESSION['profile_pic'] = $user['profile_pic'];
         header("Location: dashboard.php"); // Redirigir al panel de usuario
         exit();
     } else {
