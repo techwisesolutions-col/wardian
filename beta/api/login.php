@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
 
     // Consulta para obtener los datos del usuario
-    $stmt = $conn->prepare("SELECT id, username, name, password FROM user WHERE username = ?");
+    $stmt = $conn->prepare("SELECT id, username, name, password, profile_pic FROM user WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
