@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Function to calculate total value
   function calculateTotal(row) {
-    const quantity = parseFloat(row.querySelector('.quantity').value) || 0;
+    const quantity = parseFloat(row.querySelector('.quantity').value) || 1;
     const unitValue = parseFloat(row.querySelector('.unit-value').value) || 0;
     const discount = parseFloat(row.querySelector('.discount').value) || 0;
     const withholdingTax = parseFloat(row.querySelector('.withholding-tax').value) || 0;
