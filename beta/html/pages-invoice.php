@@ -162,8 +162,8 @@ if ($id_third) {
                                           <th class="text-center" scope="col">Cantidad</th>
                                           <th class="text-center" scope="col">Valor Unitario</th>
                                           <th class="text-center" scope="col">% Descuento</th>
+                                          <th class="text-center" scope="col">Impuesto de Cargo</th>   
                                           <th class="text-center" scope="col">Impuesto de Retencion</th>
-                                            <th class="text-center" scope="col">Impuesto de Cargo</th>
                                           <th class="text-center" scope="col">Valor Total</th>
                                           <th class="text-center" scope="col">Acciones</th>
                                         </tr>
@@ -294,10 +294,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const withholdingTax = parseFloat(row.querySelector('.withholding-tax').value) || 0;
     const chargeTax = parseFloat(row.querySelector('.charge_tax').value) || 0;  // Obtén el valor de charge_tax
 
-    let total = quantity * unitValue;
+    let total = quantity * unitValue;  // Calcula el valor inicial
     total -= total * (discount / 100);  // Aplica el descuento
     total -= total * (withholdingTax / 100);  // Aplica el impuesto de retención
-    total += chargeTax;  // Suma el charge_tax al total
+    
+    let totalChargeTax = total * (chargeTax / 100);  // Calcula el chargeTax
+    total += totalChargeTax;  // Agrega el chargeTax al total final
+
 
     row.querySelector('.total-value').value = total.toFixed(2);  // Muestra el total final
   }
