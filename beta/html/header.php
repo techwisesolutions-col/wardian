@@ -4,6 +4,7 @@ session_start(); // Asegúrate de iniciar la sesión antes de acceder a las vari
 // Verificar si la variable de sesión 'name' está definida
 if (isset($_SESSION['name'])) {
     $nombreUsuario = $_SESSION['name'];
+    $profilePic = $_SESSION['profile_pic'];
 }
 ?>
 <div class="iq-top-navbar">
