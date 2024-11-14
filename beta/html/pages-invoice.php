@@ -201,6 +201,10 @@ if ($id_third) {
                                  </div>
                               </div>
                               <div class="col-sm-6"></div>
+                                <div class="text-right">
+                                  <label for="grand-total">Total General: </label>
+                                  <input type="number" id="grand-total" class="form-control" readonly>
+                                </div>
                               <div class="col-sm-6 text-right">
                                  <button type="button" class="btn btn-primary"><i class="ri-printer-line"></i> Crear Factura y Enviar</button>
                               </div>
@@ -285,31 +289,40 @@ if ($id_third) {
      <script>
 document.addEventListener('DOMContentLoaded', () => {
   const table = document.getElementById('products-table').getElementsByTagName('tbody')[0];
+  const grandTotalField = document.getElementById('grand-total');
 
-  // Function to calculate total value
+  // Function to calculate total value for each row
   function calculateTotal(row) {
     const quantity = parseFloat(row.querySelector('.quantity').value) || 1;
     const unitValue = parseFloat(row.querySelector('.unit-value').value) || 0;
     const discount = parseFloat(row.querySelector('.discount').value) || 0;
     const withholdingTax = parseFloat(row.querySelector('.withholding-tax').value) || 0;
-    const chargeTax = parseFloat(row.querySelector('.charge_tax').value) || 0;  // Obtén el valor de charge_tax
+    const chargeTax = parseFloat(row.querySelector('.charge_tax').value) || 0;
 
-    let total = quantity * unitValue;  // Calcula el valor inicial
-    total -= total * (discount / 100);  // Aplica el descuento
-    total -= total * (withholdingTax / 100);  // Aplica el impuesto de retención
-    
-    let totalChargeTax = total * (chargeTax / 100);  // Calcula el chargeTax
-    total += totalChargeTax;  // Agrega el chargeTax al total final
+    let total = quantity * unitValue;
+    total -= total * (discount / 100);
+    total -= total * (withholdingTax / 100);
+    let totalChargeTax = total * (chargeTax / 100);
+    total += totalChargeTax;
 
+    row.querySelector('.total-value').value = total.toFixed(2);
+    calculateGrandTotal();
+  }
 
-    row.querySelector('.total-value').value = total.toFixed(2);  // Muestra el total final
+  // Function to calculate the grand total of all rows
+  function calculateGrandTotal() {
+    let grandTotal = 0;
+    table.querySelectorAll('.total-value').forEach(input => {
+      grandTotal += parseFloat(input.value) || 0;
+    });
+    grandTotalField.value = grandTotal.toFixed(2);
   }
 
   // Event listener to add a new row
   document.querySelector('.add-row').addEventListener('click', () => {
     const newRow = table.rows[0].cloneNode(true);
-    newRow.querySelectorAll('input').forEach(input => input.value = '');  // Limpia los campos de la nueva fila
-    table.appendChild(newRow);  // Añade la nueva fila al final de la tabla
+    newRow.querySelectorAll('input').forEach(input => input.value = '');
+    table.appendChild(newRow);
   });
 
   // Event delegation for dynamically added rows
@@ -320,25 +333,22 @@ document.addEventListener('DOMContentLoaded', () => {
       const selectedOption = target.options[target.selectedIndex];
       const price = selectedOption.getAttribute('data-price');
       unitValueInput.value = price || 0;
-      calculateTotal(target.closest('tr'));  // Calcula el total después de seleccionar el producto
+      calculateTotal(target.closest('tr'));
     }
   });
 
   // Event listener to update total when inputs change
   table.addEventListener('input', (event) => {
-    if (event.target.classList.contains('quantity') ||
-        event.target.classList.contains('unit-value') ||
-        event.target.classList.contains('discount') ||
-        event.target.classList.contains('withholding-tax') ||
-        event.target.classList.contains('charge_tax')) {  // Incluye charge_tax en la condición
-      calculateTotal(event.target.closest('tr'));  // Recalcula el total cuando cambia cualquier campo relevante
+    if (['quantity', 'unit-value', 'discount', 'withholding-tax', 'charge_tax'].some(cls => event.target.classList.contains(cls))) {
+      calculateTotal(event.target.closest('tr'));
     }
   });
 
   // Event listener to remove rows
   table.addEventListener('click', (event) => {
     if (event.target.classList.contains('remove-row') && table.rows.length > 1) {
-      event.target.closest('tr').remove();  // Elimina la fila cuando se hace clic en el botón de eliminar
+      event.target.closest('tr').remove();
+      calculateGrandTotal(); // Recalculate grand total after removing a row
     }
   });
 });
