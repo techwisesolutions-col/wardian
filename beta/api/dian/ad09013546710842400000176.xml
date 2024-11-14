@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CreditNote xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:sts="dian:gov:co:facturaelectronica:Structures-2-1" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" xmlns:xades141="http://uri.etsi.org/01903/v1.4.1#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2     http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-CreditNote-2.1.xsd">
+  <ext:UBLExtensions>
+    <ext:UBLExtension>
+      <ext:ExtensionContent>
+        <sts:DianExtensions>
+          <sts:InvoiceSource>
+            <cbc:IdentificationCode listAgencyID="6" listAgencyName="United Nations Economic Commission for Europe" listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.1">CO</cbc:IdentificationCode>
+          </sts:InvoiceSource>
+          <sts:SoftwareProvider>
+            <sts:ProviderID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="1" schemeName="31">901354671</sts:ProviderID>
+            <sts:SoftwareID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">3e710a08-96c4-4641-ae12-bc37cab32f9e</sts:SoftwareID>
+          </sts:SoftwareProvider>
+          <sts:SoftwareSecurityCode schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">fd2b6854124f15ef9aeeefdc09dfc43ca66bd79c9776c3f995bca0e8678d3166cab622ba08aa216effec9ae80d29859a</sts:SoftwareSecurityCode>
+          <sts:AuthorizationProvider>
+            <sts:AuthorizationProviderID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="4" schemeName="31">800197268</sts:AuthorizationProviderID>
+          </sts:AuthorizationProvider>
+          <sts:QRCode>https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=fb108833fbd38c2e5c7f3c81972fe9bd960c5ece4104b5a95db6e5fa5661c168c6335dcde57e914cb8c887bf4a35f23f</sts:QRCode>
+        </sts:DianExtensions>
+      </ext:ExtensionContent>
+    </ext:UBLExtension>
+    <ext:UBLExtension>
+      <ext:ExtensionContent><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="NODEXUM-77070F639924A8272DBECE556C0A0B2EEFC041C3"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><ds:Reference Id="REF-244BDF8200EFED2D1EBA4570FC547E2C3E96C338" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><ds:DigestValue>UzADhSuxZXjkTngh/OaeZiPDFgYTiMmQRo2pOnTkIP1Qcs1HwujuoVLY+fJ/4+H+xLA8w3NdLNfYYitgLCBDGQ==</ds:DigestValue></ds:Reference><ds:Reference URI="#KEY-INFO-2E33D9CB6B55EAC789730E25E2F338EBF79D2A5C"><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><ds:DigestValue>XziMHX930xNeKNE6tdtzQ0dsBhhAqBSamCJyHQP4A5C+WOkE6qvMHZSjOivQ3vKPgVqmJ5xQRddZESUjGg6LwQ==</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#SIGNED-PROPS-ACE5FC688205848BB758B2810A8E50ED31AF77DC"><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><ds:DigestValue>t9TnHNqFIiX2Q6uTidO2QbLFloYSw+EQrq5DUFzRzpLUuRy1LZoPxdMgyB0YTUGjI3hsESb3hVzP24AQNVPxRQ==</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="SIG-VALUE-9EA777FA2C9DA6434F110604294A26E0174C9234">NXvdn3k+IhhHUqtKmSnSPpdZ99QhLqx3lKDGbRkHPAvP6XqFvjnXbl4X6dhazPYIpUKB7C2QU70xczTdopC19OP7IOBCs8XuVqJMuyBMJVq/HZfcF3OD2bfw3dHaln8YCOm3rr+9E4jxSfOsCKGab+b6mFWysKXvzlcfvjHYMTWcT+1lL/8g+bgmzCMWz6MYm6MuhPPAU0VaQJKj1rFBv6A2YnO+Flfbma6/cwuOaGvPKyhjLqflTo5PGilWpNoJmj97hGmImA8ud6wmn73PALSuO6qZZgmeuq8UskoBIFJhPwSNEPQ2zoEv1ypvjUwwm5sWMnRzi5H9sm3Xx3xfdA==</ds:SignatureValue><ds:KeyInfo Id="KEY-INFO-2E33D9CB6B55EAC789730E25E2F338EBF79D2A5C"><ds:X509Data><ds:X509Certificate>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</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties Target="#NODEXUM-77070F639924A8272DBECE556C0A0B2EEFC041C3"><xades:SignedProperties Id="SIGNED-PROPS-ACE5FC688205848BB758B2810A8E50ED31AF77DC"><xades:SignedSignatureProperties><xades:SigningTime>2024-10-19T12:10:50.000-05:00</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><ds:DigestValue>nPLrUUd5dHUByP7kWpzNAOJryWZsMTQ7N55t/n/j4VmsL9+SO84zYSddSfMYhdnii5I9eHoUco1VvzYEWjRS8A==</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>C=CO,L=Bogota D.C.,O=Andes SCD,OU=Division de certificacion entidad final,CN=CA ANDES SCD S.A. Clase II v3,emailAddress=info@andesscd.com.co</ds:X509IssuerName><ds:X509SerialNumber>7821453394839505154</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><ds:DigestValue>4cHQuOsKo35nS1XCAQg2Rz4Kta3KNBe+IjQZxG3VdGRle6T3y0QfBFkMNTo175zD4bPQHAooRnsUatb2gU7dIA==</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>C=CO,L=Bogota D.C.,O=Andes SCD,OU=Division de certificacion,CN=ROOT CA ANDES SCD S.A.,emailAddress=info@andesscd.com.co</ds:X509IssuerName><ds:X509SerialNumber>6218172215901586992</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><ds:DigestValue>L+GR4ozHO/SpmNwQVKr25N+ItB6Xdx9tq2zvkPe4NXOFKdzNnmwNetYg1w14zfWP8XFejj5bZtxmbdy9d2GPjQ==</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>C=CO,L=Bogota D.C.,O=Andes SCD,OU=Division de certificacion,CN=ROOT CA ANDES SCD S.A.,emailAddress=info@andesscd.com.co</ds:X509IssuerName><ds:X509SerialNumber>3184328748892787122</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyId><xades:SigPolicyId><xades:Identifier>https://facturaelectronica.dian.gov.co/politicadefirma/v2/politicadefirmav2.pdf</xades:Identifier></xades:SigPolicyId><xades:SigPolicyHash><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><ds:DigestValue>dMoMvtcG5aIzgYo0tIsSQeVJBDnUnfSOfBpxXrmor0Y=</ds:DigestValue></xades:SigPolicyHash></xades:SignaturePolicyId></xades:SignaturePolicyIdentifier><xades:SignerRole><xades:ClaimedRoles><xades:ClaimedRole>supplier</xades:ClaimedRole></xades:ClaimedRoles></xades:SignerRole></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></ext:ExtensionContent>
+    </ext:UBLExtension>
+  </ext:UBLExtensions>
+  <cbc:UBLVersionID>UBL 2.1</cbc:UBLVersionID>
+  <cbc:CustomizationID>20</cbc:CustomizationID>
+  <cbc:ProfileID>DIAN 2.1: Nota Crédito de Factura Electrónica de Venta</cbc:ProfileID>
+  <cbc:ProfileExecutionID>1</cbc:ProfileExecutionID>
+  <cbc:ID>NC56</cbc:ID>
+  <cbc:UUID schemeID="1" schemeName="CUDE-SHA384">fb108833fbd38c2e5c7f3c81972fe9bd960c5ece4104b5a95db6e5fa5661c168c6335dcde57e914cb8c887bf4a35f23f</cbc:UUID>
+  <cbc:IssueDate>2024-10-19</cbc:IssueDate>
+  <cbc:IssueTime>12:10:50-05:00</cbc:IssueTime>
+  <cbc:CreditNoteTypeCode>91</cbc:CreditNoteTypeCode>
+  <cbc:DocumentCurrencyCode>COP</cbc:DocumentCurrencyCode>
+  <cbc:LineCountNumeric>2</cbc:LineCountNumeric>
+  <cac:DiscrepancyResponse>
+    <cbc:ReferenceID/>
+    <cbc:ResponseCode>5</cbc:ResponseCode>
+    <cbc:Description>Factura anterior</cbc:Description>
+  </cac:DiscrepancyResponse>
+  <cac:BillingReference>
+    <cac:InvoiceDocumentReference>
+      <cbc:ID>FVE1199</cbc:ID>
+      <cbc:UUID schemeName="CUFE-SHA384">dffe087a7d382325cba91b6c881d6b9e3ec29b1e39de5ec3cf6c79a74c3b2f17a5537eafd6ed7bd70b4f5dd3ae23721a</cbc:UUID>
+      <cbc:IssueDate>2024-10-19</cbc:IssueDate>
+    </cac:InvoiceDocumentReference>
+  </cac:BillingReference>
+  <cac:AccountingSupplierParty>
+    <cbc:AdditionalAccountID>1</cbc:AdditionalAccountID>
+    <cac:Party>
+      <cac:PartyName>
+        <cbc:Name>NEXO CONTABLE S.A.S</cbc:Name>
+      </cac:PartyName>
+      <cac:PhysicalLocation>
+        <cac:Address>
+          <cbc:ID>05001</cbc:ID>
+          <cbc:CityName>Medellín</cbc:CityName>
+          <cbc:CountrySubentity>Antioquia</cbc:CountrySubentity>
+          <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+          <cac:AddressLine>
+            <cbc:Line>CL 32C 65D 33</cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+            <cbc:Name languageID="es">Colombia</cbc:Name>
+          </cac:Country>
+        </cac:Address>
+      </cac:PhysicalLocation>
+      <cac:PartyTaxScheme>
+        <cbc:RegistrationName>NEXO CONTABLE S.A.S</cbc:RegistrationName>
+        <cbc:CompanyID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="1" schemeName="31">901354671</cbc:CompanyID>
+        <cbc:TaxLevelCode>R-99-PN</cbc:TaxLevelCode>
+        <cac:RegistrationAddress>
+          <cbc:ID>05001</cbc:ID>
+          <cbc:CityName>Medellín</cbc:CityName>
+          <cbc:CountrySubentity>Antioquia</cbc:CountrySubentity>
+          <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+          <cac:AddressLine>
+            <cbc:Line>CL 32C 65D 33</cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+            <cbc:Name languageID="es">Colombia</cbc:Name>
+          </cac:Country>
+        </cac:RegistrationAddress>
+        <cac:TaxScheme>
+          <cbc:ID>01</cbc:ID>
+          <cbc:Name>IVA</cbc:Name>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>NEXO CONTABLE S.A.S</cbc:RegistrationName>
+        <cbc:CompanyID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="1" schemeName="31">901354671</cbc:CompanyID>
+        <cac:CorporateRegistrationScheme>
+          <cbc:ID>NC</cbc:ID>
+          <cbc:Name>No tiene</cbc:Name>
+        </cac:CorporateRegistrationScheme>
+      </cac:PartyLegalEntity>
+      <cac:Contact>
+        <cbc:Name>NEXO CONTABLE S.A.S</cbc:Name>
+        <cbc:Telephone>3175751320</cbc:Telephone>
+        <cbc:ElectronicMail>auxiliar@nexocontable.com</cbc:ElectronicMail>
+      </cac:Contact>
+    </cac:Party>
+  </cac:AccountingSupplierParty>
+  <cac:AccountingCustomerParty>
+    <cbc:AdditionalAccountID>1</cbc:AdditionalAccountID>
+    <cac:Party>
+      <cac:PhysicalLocation>
+        <cac:Address>
+          <cbc:ID>05001</cbc:ID>
+          <cbc:CityName>Medellín</cbc:CityName>
+          <cbc:CountrySubentity>Antioquia</cbc:CountrySubentity>
+          <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+          <cac:AddressLine>
+            <cbc:Line>CALLE 39 90 23</cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+            <cbc:Name languageID="es">Colombia</cbc:Name>
+          </cac:Country>
+        </cac:Address>
+      </cac:PhysicalLocation>
+      <cac:PartyTaxScheme>
+        <cbc:RegistrationName>TECHWISE SOLUTIONS SAS</cbc:RegistrationName>
+        <cbc:CompanyID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="9" schemeName="31">901821016</cbc:CompanyID>
+        <cbc:TaxLevelCode>R-99-PN</cbc:TaxLevelCode>
+        <cac:RegistrationAddress>
+          <cbc:ID>05001</cbc:ID>
+          <cbc:CityName>Medellín</cbc:CityName>
+          <cbc:CountrySubentity>Antioquia</cbc:CountrySubentity>
+          <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+          <cac:AddressLine>
+            <cbc:Line>CALLE 39 90 23</cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+            <cbc:Name languageID="es">Colombia</cbc:Name>
+          </cac:Country>
+        </cac:RegistrationAddress>
+        <cac:TaxScheme>
+          <cbc:ID>01</cbc:ID>
+          <cbc:Name>IVA</cbc:Name>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>TECHWISE SOLUTIONS SAS</cbc:RegistrationName>
+        <cbc:CompanyID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="9" schemeName="31">901821016</cbc:CompanyID>
+        <cac:CorporateRegistrationScheme>
+          <cbc:Name>No tiene</cbc:Name>
+        </cac:CorporateRegistrationScheme>
+      </cac:PartyLegalEntity>
+      <cac:Contact>
+        <cbc:Name>TECHWISE SOLUTIONS SAS</cbc:Name>
+        <cbc:Telephone>3243556423</cbc:Telephone>
+        <cbc:ElectronicMail>company@techwisesolutions.com.co</cbc:ElectronicMail>
+      </cac:Contact>
+    </cac:Party>
+  </cac:AccountingCustomerParty>
+  <cac:PaymentMeans>
+    <cbc:ID>1</cbc:ID>
+    <cbc:PaymentMeansCode>10</cbc:PaymentMeansCode>
+    <cbc:PaymentID>1</cbc:PaymentID>
+  </cac:PaymentMeans>
+  <cac:TaxTotal>
+    <cbc:TaxAmount currencyID="COP">380.00</cbc:TaxAmount>
+    <cbc:RoundingAmount currencyID="COP">0.00</cbc:RoundingAmount>
+    <cac:TaxSubtotal>
+      <cbc:TaxableAmount currencyID="COP">2000.00</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="COP">380.00</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cbc:Percent>19.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>01</cbc:ID>
+          <cbc:Name>IVA</cbc:Name>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>
+  </cac:TaxTotal>
+  <cac:LegalMonetaryTotal>
+    <cbc:LineExtensionAmount currencyID="COP">3111.00</cbc:LineExtensionAmount>
+    <cbc:TaxExclusiveAmount currencyID="COP">2000.00</cbc:TaxExclusiveAmount>
+    <cbc:TaxInclusiveAmount currencyID="COP">3491.00</cbc:TaxInclusiveAmount>
+    <cbc:PrepaidAmount currencyID="COP">0.00</cbc:PrepaidAmount>
+    <cbc:PayableAmount currencyID="COP">3491.00</cbc:PayableAmount>
+  </cac:LegalMonetaryTotal>
+  <cac:CreditNoteLine>
+    <cbc:ID>1</cbc:ID>
+    <cbc:CreditedQuantity unitCode="WSD">1.000000</cbc:CreditedQuantity>
+    <cbc:LineExtensionAmount currencyID="COP">2000.000000</cbc:LineExtensionAmount>
+    <cac:TaxTotal>
+      <cbc:TaxAmount currencyID="COP">380.00</cbc:TaxAmount>
+      <cbc:RoundingAmount currencyID="COP">0.00</cbc:RoundingAmount>
+      <cac:TaxSubtotal>
+        <cbc:TaxableAmount currencyID="COP">2000.00</cbc:TaxableAmount>
+        <cbc:TaxAmount currencyID="COP">380.00</cbc:TaxAmount>
+        <cac:TaxCategory>
+          <cbc:Percent>19.00</cbc:Percent>
+          <cac:TaxScheme>
+            <cbc:ID>01</cbc:ID>
+            <cbc:Name>IVA</cbc:Name>
+          </cac:TaxScheme>
+        </cac:TaxCategory>
+      </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:Item>
+      <cbc:Description>SERVICIO DE CONTABILIDAD OCTUBRE</cbc:Description>
+      <cac:StandardItemIdentification>
+        <cbc:ID schemeID="999" schemeName="Estándar de adopción del contribuyente" schemeAgencyID="">10</cbc:ID>
+      </cac:StandardItemIdentification>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="COP">2000.000000</cbc:PriceAmount>
+      <cbc:BaseQuantity unitCode="WSD">1.000000</cbc:BaseQuantity>
+    </cac:Price>
+  </cac:CreditNoteLine>
+  <cac:CreditNoteLine>
+    <cbc:ID>2</cbc:ID>
+    <cbc:CreditedQuantity unitCode="WSD">1.000000</cbc:CreditedQuantity>
+    <cbc:LineExtensionAmount currencyID="COP">1111.000000</cbc:LineExtensionAmount>
+    <cac:Item>
+      <cbc:Description>SERVICIOS DE SOFTWARE EN LA NUBE</cbc:Description>
+      <cac:StandardItemIdentification>
+        <cbc:ID schemeID="999" schemeName="Estándar de adopción del contribuyente" schemeAgencyID="">098</cbc:ID>
+      </cac:StandardItemIdentification>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="COP">1111.000000</cbc:PriceAmount>
+      <cbc:BaseQuantity unitCode="WSD">1.000000</cbc:BaseQuantity>
+    </cac:Price>
+  </cac:CreditNoteLine>
+</CreditNote>
