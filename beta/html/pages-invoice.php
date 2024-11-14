@@ -40,7 +40,7 @@ if ($id_third) {
 
         // Ahora puedes usar las variables como desees
     } else {
-        echo "No se encontró un destinatario de factura con el ID proporcionado.";
+        echo "No se encontró un tercero para la factura con el ID proporcionado.";
     }
 } else {
     echo "El parámetro id_third es requerido.";
@@ -155,59 +155,57 @@ if ($id_third) {
                                  <h5>Order Summary</h5>
                                  <div class="table-responsive-sm">
                                    <table class="table table-striped" id="products-table">
-  <thead>
-    <tr>
-      <th class="text-center" scope="col">#</th>
-      <th scope="col">Producto</th>
-      <th class="text-center" scope="col">Cantidad</th>
-      <th class="text-center" scope="col">Valor Unitario</th>
-      <th class="text-center" scope="col">% Descuento</th>
-      <th class="text-center" scope="col">Impuesto de Retencion</th>
-      <th class="text-center" scope="col">Valor Total</th>
-      <th class="text-center" scope="col">Acciones</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th class="text-center" scope="row">1</th>
-      <td>
-        <select class="form-control product-select" name="product" required>
-          <option value="" disabled selected>Seleccione un producto</option>
-          <?php
-          require '../config/conexion.php';
-          $query = "SELECT id, product_name, price_list FROM products";
-          $result = $conn->query($query);
-          while ($row = $result->fetch_assoc()):
-          ?>
-            <option value="<?php echo htmlspecialchars($row['id']); ?>" data-price="<?php echo htmlspecialchars($row['price_list']); ?>">
-              <?php echo htmlspecialchars($row['product_name']); ?>
-            </option>
-          <?php endwhile; ?>
-        </select>
-      </td>
-      <td class="text-center"><input type="number" class="form-control quantity" name="quantity" value="1" required></td>
-      <td class="text-center"><input type="number" class="form-control unit-value" name="unit_value" required readonly></td>
-      <td class="text-center"><input type="number" class="form-control discount" name="discount" required></td>
-      <td class="text-center"><input type="number" class="form-control withholding-tax" name="withholding_tax" required></td>
-      <td class="text-center"><input type="number" class="form-control total-value" name="value_total" readonly></td>
-      <td class="text-center">
-        <button type="button" class="btn btn-primary add-row">+</button>
-        <button type="button" class="btn btn-danger remove-row">-</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
+                                      <thead>
+                                        <tr>
+                                          <th class="text-center" scope="col">#</th>
+                                          <th scope="col">Producto</th>
+                                          <th class="text-center" scope="col">Cantidad</th>
+                                          <th class="text-center" scope="col">Valor Unitario</th>
+                                          <th class="text-center" scope="col">% Descuento</th>
+                                          <th class="text-center" scope="col">Impuesto de Retencion</th>
+                                          <th class="text-center" scope="col">Valor Total</th>
+                                          <th class="text-center" scope="col">Acciones</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <th class="text-center" scope="row">1</th>
+                                          <td>
+                                            <select class="form-control product-select" name="product" required>
+                                              <option value="" disabled selected>Seleccione un producto</option>
+                                              <?php
+                                              require '../config/conexion.php';
+                                              $query = "SELECT id, product_name, price_list FROM products";
+                                              $result = $conn->query($query);
+                                              while ($row = $result->fetch_assoc()):
+                                              ?>
+                                                <option value="<?php echo htmlspecialchars($row['id']); ?>" data-price="<?php echo htmlspecialchars($row['price_list']); ?>">
+                                                  <?php echo htmlspecialchars($row['product_name']); ?>
+                                                </option>
+                                              <?php endwhile; ?>
+                                            </select>
+                                          </td>
+                                          <td class="text-center"><input type="number" class="form-control quantity" name="quantity" value="1" required></td>
+                                          <td class="text-center"><input type="number" class="form-control unit-value" name="unit_value" required readonly></td>
+                                          <td class="text-center"><input type="number" class="form-control discount" name="discount" required></td>
+                                          <td class="text-center"><input type="number" class="form-control withholding-tax" name="withholding_tax" required></td>
+                                          <td class="text-center"><input type="number" class="form-control total-value" name="value_total" readonly></td>
+                                          <td class="text-center">
+                                            <button type="button" class="btn btn-primary add-row">+</button>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
                                  </div>
                               </div>
                               <div class="col-sm-6"></div>
                               <div class="col-sm-6 text-right">
                                  <button type="button" class="btn btn-link mr-3"><i class="ri-printer-line"></i> Download Print</button>
-                                 <button type="button" class="btn btn-primary">Submit</button>
+                                 <button type="button" class="btn btn-primary">Crear Factura y Enviarf</button>
                               </div>
                               <div class="col-sm-12 mt-5">
-                                 <b class="text-danger">Notes:</b>
-                                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                                 <b class="text-danger">Nota:</b>
+                                 <p><textarea type="text" class="form-control" name="note" value="1" rows="4" cols="50"></textarea></p>
                               </div>
                            </div>
                         </div>
