@@ -205,7 +205,7 @@ if ($id_third) {
                               </div>
                               <div class="col-sm-12 mt-5">
                                  <b class="text-danger">Nota:</b>
-                                 <p><textarea type="text" class="form-control" name="note" value="1" rows="4" cols="50"></textarea></p>
+                                 <p><textarea type="text" class="form-control" name="note" value="1" rows="2" cols="25"></textarea></p>
                               </div>
                            </div>
                         </div>
