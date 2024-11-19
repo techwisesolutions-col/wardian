@@ -39,28 +39,21 @@
                       <div class="col-md-5 bg-white sign-in-page-data">
                           <div class="sign-in-from">
                               <h1 class="mb-0">Restablecer contraseña</h1>
-                              <p class="text-dark">Ingrese su dirección de correo electrónico y le enviaremos un correo electrónico con instrucciones para restablecer su contraseña.</p>
-                              <form class="mt-4" method="POST" action="../api/user/pages-recoverpw.php">
+                              <p class="text-dark">Ingrese tu nueva contraseña.</p>
+                              <form class="mt-4" method="POST" action="../api/user/pages-recoverpw-reset.php">
                                   <div class="form-group">
-                                      <label for="exampleInputEmail1">Dirección de correo electrónico</label>
-                                      <input type="email" class="form-control mb-0" name="email" placeholder="Ingrese el correo electrónico">
+                                      <label for="exampleInputEmail1">Nueva contraseña</label>
+                                      <input type="password" class="form-control mb-0" name="password">
                                   </div>
+                                  <div class="form-group">
+                                      <label for="exampleInputEmail1">Repite la nueva contraseña</label>
+                                      <input type="password" class="form-control mb-0" name="confirm_password">
+                                  </div>
+
+                                      <input type="hidden" class="form-control mb-0" name="token" value="<?php echo $_GET['token'];?>">
 
                                   <div class="d-inline-block w-100">
                                       <button type="submit" class="btn btn-primary float-right">Restablecer contraseña</button>
-                                     
-                                      <?php if (isset($_GET['error']) && $_GET['error'] == 'missing_fields'): ?>
-                                        <span class="text-dark dark-color d-inline-block line-height-2">Error</span>
-                                      <?php endif; ?>
-
-                                    <?php if (isset($_GET['error']) && $_GET['error'] == 'nit_exists'): ?>
-                                        <span class="text-dark dark-color d-inline-block line-height-2">Error</span>
-                                    <?php endif; ?>
-
-                                    <?php if (isset($_GET['success']) && $_GET['success'] == 1): ?>
-                                        <span class="text-primary dark-color d-inline-block line-height-2">Se ha enviado un enlace de <br>restablecimiento a tu correo...</span>
-                                    <?php endif; ?>
-
                                   </div>
                               </form>
                           </div>
