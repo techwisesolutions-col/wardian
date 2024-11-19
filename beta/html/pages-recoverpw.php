@@ -38,18 +38,18 @@
                     <div class="row m-0">
                       <div class="col-md-5 bg-white sign-in-page-data">
                           <div class="sign-in-from">
-                              <h1 class="mb-0">Reset Password</h1>
-                              <p class="text-dark">Enter your email address and we'll send you an email with instructions to reset your password.</p>
+                              <h1 class="mb-0">Restablecer contraseña</h1>
+                              <p class="text-dark">Ingrese su dirección de correo electrónico y le enviaremos un correo electrónico con instrucciones para restablecer su contraseña.</p>
                               <form class="mt-4">
 
                                   <div class="form-group">
-                                      <label for="exampleInputEmail1">Email address</label>
-                                      <input type="email" class="form-control mb-0" id="exampleInputEmail1" placeholder="Enter email">
+                                      <label for="exampleInputEmail1">Dirección de correo electrónico</label>
+                                      <input type="email" class="form-control mb-0" id="exampleInputEmail1" placeholder="Ingrese el correo electrónico">
                                   </div>
 
                                   <div class="d-inline-block w-100">
 
-                                      <button type="submit" class="btn btn-primary float-right">Reset Password</button>
+                                      <button type="submit" class="btn btn-primary float-right">Restablecer contraseña</button>
                                   </div>
 
                               </form>
@@ -59,20 +59,20 @@
                           <div class="sign-in-detail text-white">
                               <a class="sign-in-logo mb-5" href="#"><img src="images/logo-full.png" class="img-fluid" alt="logo"></a>
                               <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="1" data-items-laptop="1" data-items-tab="1" data-items-mobile="1" data-items-mobile-sm="1" data-margin="0">
-                                  <div class="item">
+                              <div class="item">
                                       <img src="images/login/1.png" class="img-fluid mb-4" alt="logo">
-                                      <h4 class="mb-1 text-white">Manage your orders</h4>
-                                      <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                                      <h4 class="mb-1 text-white">AI</h4>
+                                      <p>Con la Contabilidad Inteligente de WARDIAN, tu negocio tiene el poder..</p>
+                                  </div>
+                                  <div class="item">
+                                      <img src="images/login/1.png" class="img-fluid mb-4" alt="logo"> 
+                                      <h4 class="mb-1 text-white">API</h4>
+                                      <p>El poder de hacer tareas en automático.</p>
                                   </div>
                                   <div class="item">
                                       <img src="images/login/1.png" class="img-fluid mb-4" alt="logo">
-                                      <h4 class="mb-1 text-white">Manage your orders</h4>
-                                      <p>It is a long established fact that a reader will be distracted by the readable content.</p>
-                                  </div>
-                                  <div class="item">
-                                      <img src="images/login/1.png" class="img-fluid mb-4" alt="logo">
-                                      <h4 class="mb-1 text-white">Manage your orders</h4>
-                                      <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                                      <h4 class="mb-1 text-white">SEGURIDAD</h4>
+                                      <p>Compromiso con la seguridad de la información y la excelencia en los procesos.</p>
                                   </div>
                               </div>
                           </div>

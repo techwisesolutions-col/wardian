@@ -48,7 +48,7 @@
                                   </div>
                                   <div class="form-group">
                                       <label for="exampleInputPassword1">Contraseña</label>
-                                      <a href="#" class="float-right">¿Has olvidado tu contraseña?</a>
+                                      <a href="pages-recoverpw.php" class="float-right">¿Has olvidado tu contraseña?</a>
                                       <input type="password" class="form-control mb-0" name="password" placeholder="Contraseña">
                                   </div>
                                   <div class="d-inline-block w-100">
