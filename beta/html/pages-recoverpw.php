@@ -40,8 +40,7 @@
                           <div class="sign-in-from">
                               <h1 class="mb-0">Restablecer contraseña</h1>
                               <p class="text-dark">Ingrese su dirección de correo electrónico y le enviaremos un correo electrónico con instrucciones para restablecer su contraseña.</p>
-                              <form class="mt-4">
-
+                              <form class="mt-4" method="POST" action="../api/user/pages-recoverpw.php">
                                   <div class="form-group">
                                       <label for="exampleInputEmail1">Dirección de correo electrónico</label>
                                       <input type="email" class="form-control mb-0" id="exampleInputEmail1" placeholder="Ingrese el correo electrónico">
@@ -51,7 +50,6 @@
 
                                       <button type="submit" class="btn btn-primary float-right">Restablecer contraseña</button>
                                   </div>
-
                               </form>
                           </div>
                       </div>
