@@ -43,7 +43,7 @@
                               <form class="mt-4" method="POST" action="../api/user/pages-recoverpw.php">
                                   <div class="form-group">
                                       <label for="exampleInputEmail1">Dirección de correo electrónico</label>
-                                      <input type="email" class="form-control mb-0" id="exampleInputEmail1" placeholder="Ingrese el correo electrónico">
+                                      <input type="email" class="form-control mb-0" name="email" placeholder="Ingrese el correo electrónico">
                                   </div>
 
                                   <div class="d-inline-block w-100">
