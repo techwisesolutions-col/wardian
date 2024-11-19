@@ -60,6 +60,10 @@
                                   <div class="sign-info text-center">
                                       <button type="submit" class="btn btn-primary d-block w-100 mb-2">Acceder</button>
                                       <span class="text-dark dark-color d-inline-block line-height-2">¿Necesitas ayuda? <a href="#">click aqui</a></span>
+                                      
+                                      <?php if (isset($_GET['success']) && $_GET['success'] == 2): ?>
+                                        <span class="text-dark dark-color d-inline-block line-height-2">Tu contraseña ha sido restablecida con éxito.</span>
+                                      <?php endif; ?>
                                   </div>
                               </form>
                           </div>

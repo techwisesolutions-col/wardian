@@ -49,7 +49,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $delete_stmt->bind_param("i", $user_id);
         $delete_stmt->execute();
 
-        echo "Tu contraseña ha sido restablecida con éxito.";
+        // Redirigir en caso de éxito
+        header("Location: ../../html/sign-in.php?success=2");
+        exit();
+
     } else {
         die("Ocurrió un error al restablecer la contraseña. Intenta nuevamente.");
     }
