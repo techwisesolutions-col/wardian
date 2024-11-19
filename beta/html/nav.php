@@ -50,11 +50,19 @@
         </li>
       
       
-      <li>
+        <li>
             <a href="#myinvoce" class="iq-waves-effect" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="ri-store-line iq-arrow-left"></i><span>Nomina</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
             <ul id="myinvoce" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle" style="">
             <li><a href="./#"><i class="ri-add-circle-line"></i>Cargar Nomina</a></li>
             <li><a href="./#"><i class="ri-file-list-3-line"></i>Mis Cargues</a></li>
+            </ul>
+        </li>
+      
+      
+        <li>
+            <a href="#puc" class="iq-waves-effect" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="ri-calculator-line iq-arrow-left"></i><span>Contabilidad</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+            <ul id="puc" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle" style="">
+            <li><a href="./puc.php"><i class="ri-add-circle-line"></i>Lista Cuentas Contables</a></li>
             </ul>
         </li>
 
